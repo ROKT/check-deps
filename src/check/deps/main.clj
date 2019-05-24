@@ -11,8 +11,11 @@
            [org.owasp.dependencycheck.utils Settings Settings$KEYS]))
 
 (defn- ->engine []
-  (let [settings (Settings.)]
-    (.setString settings Settings$KEYS/SUPPRESSION_FILE "dev/resources/nvd-suppression.xml")
+  (let [settings (Settings.)
+        suppression-file-name "dev/resources/nvd-suppression.xml"]
+    (if (.exists (io/file suppression-file-name))
+      (.setString settings Settings$KEYS/SUPPRESSION_FILE suppression-file-name)
+      (println "No suppression file found."))
     (Engine. settings)))
 
 ;;
