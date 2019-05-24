@@ -1,0 +1,7 @@
+{:deps {org.clojure/clojure             {:mvn/version "1.10.0"}
+        org.clojure/tools.deps.alpha    {:mvn/version "0.6.496"}
+        org.owasp/dependency-check-core {:mvn/version "5.0.0-M3"}}
+ :paths ["src"]
+ :aliases {:dev {:extra-paths ["dev/src" "test"]}}
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://repo.clojars.org/"}}}
