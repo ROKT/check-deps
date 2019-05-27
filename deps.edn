@@ -2,6 +2,14 @@
         org.clojure/tools.deps.alpha    {:mvn/version "0.6.496"}
         org.owasp/dependency-check-core {:mvn/version "5.0.0-M3"}}
  :paths ["src"]
- :aliases {:dev {:extra-paths ["dev/src" "test"]}}
+ :aliases {:dev {:extra-paths ["dev/src" "test"]}
+           :jar {:extra-deps {pack/pack.alpha {:git/url "https://github.com/juxt/pack.alpha.git"
+                                               :sha "8acf80dd4d6e5173585f5c6fec7af28a310f3ed7"}}
+                 :main-opts ["-m" "mach.pack.alpha.skinny"
+		                         "--no-libs"
+		                         "--project-path" "target/check-deps.jar"]}
+           :deploy {:extra-deps {deps-deploy {:mvn/version "RELEASE"}}
+                    :main-opts ["-m" "deps-deploy.deps-deploy" "deploy"
+                                "target/check-deps.jar"]}}
  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
              "clojars" {:url "https://repo.clojars.org/"}}}
