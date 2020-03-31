@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>rokt</groupId>
   <artifactId>check-deps</artifactId>
-  <version>0.1.1</version>
+  <version>0.1.2-SNAPSHOT</version>
   <name>check-deps</name>
   <url>https://github.com/rokt/check-deps</url>
   <licenses>
@@ -17,17 +17,17 @@
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
-      <version>1.10.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>tools.deps.alpha</artifactId>
-      <version>0.6.496</version>
+      <version>1.10.1</version>
     </dependency>
     <dependency>
       <groupId>org.owasp</groupId>
       <artifactId>dependency-check-core</artifactId>
-      <version>5.0.0-M3</version>
+      <version>5.3.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>tools.deps.alpha</artifactId>
+      <version>0.8.677</version>
     </dependency>
   </dependencies>
   <build>
