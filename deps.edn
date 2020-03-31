@@ -8,6 +8,9 @@
                  :main-opts ["-m" "mach.pack.alpha.skinny"
 		                         "--no-libs"
 		                         "--project-path" "target/check-deps.jar"]}
+           :install {:extra-deps {deps-deploy {:mvn/version "RELEASE"}}
+                     :main-opts ["-m" "deps-deploy.deps-deploy" "install"
+                                 "target/check-deps.jar"]}
            :deploy {:extra-deps {deps-deploy {:mvn/version "RELEASE"}}
                     :main-opts ["-m" "deps-deploy.deps-deploy" "deploy"
                                 "target/check-deps.jar"]}}
