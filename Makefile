@@ -8,6 +8,10 @@ build: pom.xml
 	rm target/check-deps.jar
 	clojure -A:jar
 
-.PHONY: build
+.PHONY: install
+install: build
+	clojure -A:install
+
+.PHONY: deploy
 deploy: build
 	clojure -A:deploy
