@@ -7,12 +7,12 @@ Check a clojure.tools.deps project's dependencies using OWASP Dependency Check
 
 ### Command Line
 ```bash
-$ clj -Sdeps '{:deps {rokt/check-deps {:mvn/version "0.1.1"}}}' -m check.deps.main
+$ clj -Sdeps '{:deps {rokt/check-deps {:mvn/version "0.1.2"}}}' -m check.deps.main
 ```
 
 ### As a deps.edn alias
 ```clojure
   :nvd
-  {:extra-deps {rokt/check-deps {:mvn/version "0.1.1"}}
+  {:extra-deps {rokt/check-deps {:mvn/version "0.1.2"}}
    :main-opts ["-m" "check.deps.main"]}
 ```

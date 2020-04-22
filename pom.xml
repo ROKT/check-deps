@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>rokt</groupId>
   <artifactId>check-deps</artifactId>
-  <version>0.1.2-SNAPSHOT</version>
+  <version>0.1.2</version>
   <name>check-deps</name>
   <url>https://github.com/rokt/check-deps</url>
   <licenses>
